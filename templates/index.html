@@ -10,16 +10,15 @@ body,html {
 	width: 100%;
  	background-position: center;
   	margin: 0;
-} 
-
+}
+ 
 button {
   	background-color: #ffb84d;
   	border: none;
   	color: Black;
   	padding: 10px 22px;
  	text-align: center;
-  	text-decoration: none;
-  	
+  	text-decoration: none; 	
   	font-size: 20px;
   	margin: 3px 1px;
   	cursor: pointer;
@@ -40,34 +39,27 @@ label {
 
 input[type='file'] {
     	background: #ffb84d;
-    	color: #ffb84d;
-    	border: 3px solid #ffb84d;
+    	border: 0px solid #ffb84d;
+font-size:15px;
 }
 
 img [src="https://previews.123rf.com/images/artnovielysa/artnovielysa1411/artnovielysa141100006/34101366-angry-cartoon-mosquito.jpg"]
-{border-radius:60%;}
+{border-radius:50%;}
 
 input[type='submit'] {
-    	background: #ffb84d;
-    	color: black;
-    	border: 3px solid #ffb84d;
+    	background: green;
+    	color: White;
+    	border: 1px solid green;
+	font-size:20px;
 }
 </style>
-
 <br>
-
 <center>
-
 <img src="/static/images/download.jpg" alt="Malaria Detect" height="242" width="400">
 <br><br>
-
-
 <img src="https://previews.123rf.com/images/artnovielysa/artnovielysa1411/artnovielysa141100006/34101366-angry-cartoon-mosquito.jpg" 
 alt="Mosquito" class="mosquito" height="90" width="90" >
-
-<br>
-<br>
-
+<br><br>
 <form action="/results" method="POST" enctype="multipart/form-data">
 	<b><label for="fileupload"> Select Image to upload</label> </b>
 	<br>
@@ -75,10 +67,5 @@ alt="Mosquito" class="mosquito" height="90" width="90" >
 	<br><br>
 	<input type="submit" value="Submit"> 
 </form>
-<button type="button" onclick="alert('Here your prescription ')">More Details</button>
-
 </center>
-
-<h1>{{ result }}</h1>
-<img src="{{ url_for('static', filename=img) }}" alt="">
 </html>
