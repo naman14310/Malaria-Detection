@@ -1,0 +1,1 @@
+This is a machine learning based binary image classifier which can predict whether a person is affected by malaria or not by analyzing his cell images. It is trained on kaggle’s dataset and gave +95% accuracy. I used keras library to create and train CNN model. 
