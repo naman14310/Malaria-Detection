@@ -21,7 +21,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def index():
 	return render_template('index.html')
 
-@app.route('/upload', methods=['POST'])
+@app.route('/results', methods=['POST'])
 def upload_file():
 	file = request.files['fileupload']
 	img_name = file.filename
@@ -34,8 +34,12 @@ def upload_file():
 	if result == "uninfected":
 		return render_template('NotAffected.html')
 	
-	return render_template('affected.html', result=result)
+	return render_template('affected.html', results=result)
 
+
+@app.route('/symptoms')
+def sym():
+	return render_template('symptoms.html')
 
 if __name__ == "__main__":
 	app.run(debug=True)

@@ -6,7 +6,7 @@ from keras.preprocessing import image
 
 
 def get_results(img_name):
-    imgPath = "/static/"+img_name
+    imgPath = "./static/"+img_name
     imag = image.load_img(imgPath,target_size = (112,112))
     imag = image.img_to_array(imag)
     imag = np.expand_dims(imag,axis=0)
@@ -17,4 +17,4 @@ def get_results(img_name):
     if prob > 0.5:
         return "uninfected"
     else:
-        return {((1-prob[0])*100)}+"% parasitized"
+        return {((1-prob[0][0])*100)}+"% parasitized"
