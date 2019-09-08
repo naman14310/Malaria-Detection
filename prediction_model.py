@@ -17,4 +17,4 @@ def get_results(img_name):
     if prob > 0.5:
         return "uninfected"
     else:
-        return str((1-prob[0][0])*100)+"% parasitized"
+        return str((1-prob[0][0])*100)[:5]+"% prediction accuracy"
